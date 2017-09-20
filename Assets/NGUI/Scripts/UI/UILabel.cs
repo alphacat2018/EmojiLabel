@@ -1226,7 +1226,7 @@ public class UILabel : UIWidget
 
 #if DYNAMIC_FONT
 		// Check if there is any emoji in the text
-		if (useEmojis && emojiProvider !=null && emojiProvider.HasEmojis(mText)) {
+		if (full && useEmojis && emojiProvider !=null && emojiProvider.HasEmojis(mText)) {
             hasEmojis = true;
 			if (emojiTexture == null)
             	AddEmojiTexture();
@@ -1239,7 +1239,7 @@ public class UILabel : UIWidget
             }
 
             PrintEmojis(mEmojiTexture.geometry);
-        } else {
+        } else if (full) {
             hasEmojis = false;
 			if (emojiTexture != null) {
                 // GameObject.DestroyImmediate(emojiTexture.gameObject);

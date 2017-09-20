@@ -93,10 +93,6 @@ public class DefaultEmojiProvider : EmojiProvider
         if (length < emoji.symbol.sequence.Length)
             return null;
             
-        if (emojiFilter != null && !emojiFilter (text, emoji)) {
-            return null;
-        }
-
         if (emoji.symbol.Validate(mAtlas))
             return emoji.symbol;
 

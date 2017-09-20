@@ -2181,7 +2181,7 @@ public class UILabel : UIWidget
 
 
 public abstract class EmojiProvider {
-	public delegate bool EmojiFilter(string text, EmojiVO symbol);
+	public delegate bool EmojiFilter(string text, BMSymbol symbol);
     public EmojiFilter emojiFilter;
 
 
